@@ -139,9 +139,6 @@ if(APPLE)
 endif()
 
 if(OPENGL_FOUND)
-  add_library(lib STATIC gl2ps.c gl2ps.h)
-  set_target_properties(lib PROPERTIES OUTPUT_NAME gl2ps)
-
   add_library(shared SHARED gl2ps.c gl2ps.h)
   target_link_libraries(shared ${EXTERNAL_LIBRARIES})
   set_target_properties(shared PROPERTIES OUTPUT_NAME gl2ps
